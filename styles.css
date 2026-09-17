@@ -166,11 +166,19 @@ body {
 }
 
 .gate {
+    width: min(100%, 340px);
+    padding: 28px 22px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    animation: fade-up 0.85s ease 0.85s both;
+    background: var(--paper);
+    border-radius: 18px;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.85) inset,
+        0 22px 50px rgba(107, 30, 47, 0.14),
+        0 4px 16px rgba(194, 59, 74, 0.08);
+    animation: rise 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .gate-hint {
@@ -240,11 +248,15 @@ body {
     opacity: 0.85;
 }
 
-.secret {
-    animation: fade-up 0.7s ease both;
+.reveal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: rise 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.secret[hidden],
+.reveal[hidden],
 .gate[hidden] {
     display: none;
 }

@@ -3,18 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const PASSWORD = "phool";
 
     const gate = document.getElementById("gate");
-    const secret = document.getElementById("secret");
+    const reveal = document.getElementById("reveal");
     const input = document.getElementById("card-pass");
     const error = document.getElementById("gate-error");
 
-    if (gate && secret && input && error) {
+    if (gate && reveal && input && error) {
         gate.addEventListener("submit", (event) => {
             event.preventDefault();
 
             const guess = input.value.trim().toLowerCase();
             if (guess === PASSWORD) {
                 gate.hidden = true;
-                secret.hidden = false;
+                reveal.hidden = false;
                 error.hidden = true;
             } else {
                 error.hidden = false;
