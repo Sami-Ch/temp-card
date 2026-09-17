@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#F3D5C4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>A small note for you</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wash" aria-hidden="true"></div>
+    <div class="petals" id="petals" aria-hidden="true"></div>
+
+    <main class="page">
+        <article class="card">
+            <div class="card-inner">
+                <div class="bloom" aria-hidden="true">
+                    <svg class="bouquet" viewBox="0 0 220 168" xmlns="http://www.w3.org/2000/svg">
+                        <g class="stems">
+                            <path d="M110 166 C106 120 88 96 70 74" fill="none" stroke="#6b2a34" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M110 166 C114 124 132 98 154 76" fill="none" stroke="#6b2a34" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M110 166 C110 122 110 92 110 64" fill="none" stroke="#7a3340" stroke-width="1.7" stroke-linecap="round"/>
+                        </g>
+                        <g class="leaf leaf-left">
+                            <path d="M92 118 C72 104 52 116 56 136 C74 130 90 124 92 118Z" fill="#8f4a4a"/>
+                            <path d="M74 122 C78 118 86 120 90 118" fill="none" stroke="#f6efe6" stroke-width="0.6" opacity="0.45"/>
+                        </g>
+                        <g class="leaf leaf-right">
+                            <path d="M128 122 C150 108 168 122 162 142 C144 134 128 126 128 122Z" fill="#a45c5c"/>
+                            <path d="M146 126 C142 122 134 124 130 122" fill="none" stroke="#f6efe6" stroke-width="0.6" opacity="0.45"/>
+                        </g>
+                        <g class="rose rose-left">
+                            <ellipse cx="68" cy="70" rx="18" ry="20" fill="#f0b7c0"/>
+                            <ellipse cx="58" cy="64" rx="12" ry="14" fill="#e8a0a8" transform="rotate(-28 58 64)"/>
+                            <ellipse cx="78" cy="64" rx="12" ry="14" fill="#d97884" transform="rotate(26 78 64)"/>
+                            <ellipse cx="68" cy="72" rx="11" ry="12" fill="#c23b4a"/>
+                            <ellipse cx="68" cy="74" rx="5.5" ry="6.5" fill="#6b1e2f"/>
+                        </g>
+                        <g class="rose rose-right">
+                            <ellipse cx="154" cy="74" rx="17" ry="19" fill="#f4c7b0"/>
+                            <ellipse cx="144" cy="68" rx="11" ry="13" fill="#f0b7a4" transform="rotate(-24 144 68)"/>
+                            <ellipse cx="164" cy="68" rx="11" ry="13" fill="#e8a88c" transform="rotate(22 164 68)"/>
+                            <ellipse cx="154" cy="76" rx="10" ry="11" fill="#c45c5c"/>
+                            <ellipse cx="154" cy="78" rx="5" ry="6" fill="#8b2e3a"/>
+                        </g>
+                        <g class="rose rose-center">
+                            <ellipse cx="110" cy="56" rx="24" ry="26" fill="#f4c4cc"/>
+                            <ellipse cx="96" cy="48" rx="14" ry="16" fill="#e8a0b0" transform="rotate(-32 96 48)"/>
+                            <ellipse cx="124" cy="48" rx="14" ry="16" fill="#e07a8a" transform="rotate(30 124 48)"/>
+                            <ellipse cx="110" cy="42" rx="13" ry="12" fill="#d4788a"/>
+                            <ellipse cx="110" cy="58" rx="13" ry="14" fill="#c23b4a"/>
+                            <ellipse cx="110" cy="61" rx="6.5" ry="7.5" fill="#6b1e2f"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <p class="kicker">Phools for my Phool.</p>
+                <div class="rule" aria-hidden="true"></div>
+
+                <form class="gate" id="gate" autocomplete="off">
+                    <p class="gate-hint">Pehle password likho, phir note khulegi.</p>
+                    <label class="visually-hidden" for="card-pass">Password</label>
+                    <input
+                        type="password"
+                        id="card-pass"
+                        name="password"
+                        placeholder="password"
+                        inputmode="text"
+                        required
+                    >
+                    <button type="submit" id="unlock-btn">Open the note</button>
+                    <p class="gate-error" id="gate-error" hidden>Galat password 😌</p>
+                    <p class="gate-clue">hint: meri phool</p>
+                </form>
+
+                <div class="secret" id="secret" hidden>
+                    <!-- Write your message in the paragraphs below. -->
+                    <div class="letter">
+                        <p>Salam Phool,</p>
+                        <p class="miss">Kya kahoo bs Thank you ❤️.</p>
+                        <p>That’s all.</p>
+                    </div>
+
+                    <p class="signoff">— Sami</p>
+
+                    <div class="seal" aria-hidden="true"><span></span></div>
+                </div>
+            </div>
+        </article>
+
+        <p class="gift-line">
+            <span class="chocolates" aria-hidden="true">
+                <i></i><i></i>
+            </span>
+            flowers &amp; chocolates, for you
+        </p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
