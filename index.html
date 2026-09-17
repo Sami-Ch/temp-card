@@ -11,25 +11,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="wash" aria-hidden="true"></div>
+<body class="is-locked">
+    <div class="wash wash-warm" aria-hidden="true"></div>
+    <div class="wash wash-dark" aria-hidden="true"></div>
+    <div class="unlock-bloom" id="unlock-bloom" aria-hidden="true"></div>
     <div class="petals" id="petals" aria-hidden="true"></div>
 
     <main class="page">
         <form class="gate" id="gate" autocomplete="off">
-            <p class="gate-hint">Password guess kro pochna nahi he</p>
-            <label class="visually-hidden" for="card-pass">Password</label>
+            <p class="gate-mark">Sealed</p>
+            <h1 class="gate-title">A riddle stands between you and the note.</h1>
+            <div class="gate-rule" aria-hidden="true"></div>
+            <p class="gate-riddle">
+                I bloom in soil, and I bloom in a name.<br>
+                English knows me as something soft and bright.<br>
+                Urdu knows me as the word he kept for you.<br>
+                Same meaning. Different tongue. One key.
+            </p>
+            <label class="visually-hidden" for="card-pass">Answer</label>
             <input
-                type="password"
+                type="text"
                 id="card-pass"
                 name="password"
-                placeholder="password"
+                placeholder="Your answer"
                 inputmode="text"
+                autocapitalize="off"
+                autocorrect="off"
+                spellcheck="false"
                 required
             >
-            <button type="submit" id="unlock-btn">Open the card</button>
-            <p class="gate-error" id="gate-error" hidden>Galat password 😌</p>
-            <p class="gate-clue">hint:  </p>
+            <button type="submit" id="unlock-btn">Khul ja sim sim</button>
+            <p class="gate-error" id="gate-error" hidden>Galat jawab 😌.</p>
+            <p class="gate-clue" id="gate-clue" hidden>Think of a flower — spoken the way he says your name.</p>
         </form>
 
         <div class="reveal" id="reveal" hidden>
